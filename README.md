@@ -1,6 +1,6 @@
 # OriginStamp JavaScript Client
 
-[![Build Status](https://travis-ci.com/OriginStampTimestamping/originstamp-client-javascript.svg?token=pQzQz38vk99v2uad9eWc&branch=master)](https://travis-ci.com/OriginStampTimestamping/originstamp-client-javascript)
+[![Build Status](https://travis-ci.com/OriginStampTimestamping/originstamp-client-javascript.svg?branch=master)](https://travis-ci.com/OriginStampTimestamping/originstamp-client-javascript)
 
 ![](https://resources.originstamp.com/images/logo/originstamp-logo-landscape-mc_248x53.png)
 
