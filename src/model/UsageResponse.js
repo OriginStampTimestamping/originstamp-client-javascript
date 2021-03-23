@@ -51,72 +51,72 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('certificate_per_month'))
-        obj.certificatePerMonth = ApiClient.convertToType(data['certificate_per_month'], 'Number');
+        obj.certificate_per_month = ApiClient.convertToType(data['certificate_per_month'], 'Number');
       if (data.hasOwnProperty('consumed_certificates'))
-        obj.consumedCertificates = ApiClient.convertToType(data['consumed_certificates'], 'Number');
+        obj.consumed_certificates = ApiClient.convertToType(data['consumed_certificates'], 'Number');
       if (data.hasOwnProperty('consumed_credits'))
-        obj.consumedCredits = ApiClient.convertToType(data['consumed_credits'], 'Number');
+        obj.consumed_credits = ApiClient.convertToType(data['consumed_credits'], 'Number');
       if (data.hasOwnProperty('consumed_timestamps'))
-        obj.consumedTimestamps = ApiClient.convertToType(data['consumed_timestamps'], 'Number');
+        obj.consumed_timestamps = ApiClient.convertToType(data['consumed_timestamps'], 'Number');
       if (data.hasOwnProperty('credits_per_month'))
-        obj.creditsPerMonth = ApiClient.convertToType(data['credits_per_month'], 'Number');
+        obj.credits_per_month = ApiClient.convertToType(data['credits_per_month'], 'Number');
       if (data.hasOwnProperty('limitation_type'))
-        obj.limitationType = ApiClient.convertToType(data['limitation_type'], 'Number');
+        obj.limitation_type = ApiClient.convertToType(data['limitation_type'], 'Number');
       if (data.hasOwnProperty('remaining_credits'))
-        obj.remainingCredits = ApiClient.convertToType(data['remaining_credits'], 'Number');
+        obj.remaining_credits = ApiClient.convertToType(data['remaining_credits'], 'Number');
       if (data.hasOwnProperty('timestamps_per_month'))
-        obj.timestampsPerMonth = ApiClient.convertToType(data['timestamps_per_month'], 'Number');
+        obj.timestamps_per_month = ApiClient.convertToType(data['timestamps_per_month'], 'Number');
     }
     return obj;
   }
 
   /**
    * Total number of certificates available per month.
-   * @member {Number} certificatePerMonth
+   * @member {Number} certificate_per_month
    */
-  exports.prototype.certificatePerMonth = undefined;
+  exports.prototype.certificate_per_month = undefined;
 
   /**
    * Number of certificates requested for the current month.
-   * @member {Number} consumedCertificates
+   * @member {Number} consumed_certificates
    */
-  exports.prototype.consumedCertificates = undefined;
+  exports.prototype.consumed_certificates = undefined;
 
   /**
    * Number of used credits for the current month.
-   * @member {Number} consumedCredits
+   * @member {Number} consumed_credits
    */
-  exports.prototype.consumedCredits = undefined;
+  exports.prototype.consumed_credits = undefined;
 
   /**
    * Number of timestamps created for the current month.
-   * @member {Number} consumedTimestamps
+   * @member {Number} consumed_timestamps
    */
-  exports.prototype.consumedTimestamps = undefined;
+  exports.prototype.consumed_timestamps = undefined;
 
   /**
    * Represents the total number of credits per month.
-   * @member {Number} creditsPerMonth
+   * @member {Number} credits_per_month
    */
-  exports.prototype.creditsPerMonth = undefined;
+  exports.prototype.credits_per_month = undefined;
 
   /**
    * Determines which usage metric is applied (0 = credits, 1 = timestamps).
-   * @member {Number} limitationType
+   * @member {Number} limitation_type
    */
-  exports.prototype.limitationType = undefined;
+  exports.prototype.limitation_type = undefined;
 
   /**
    * Remaining number of credits for the current month.
-   * @member {Number} remainingCredits
+   * @member {Number} remaining_credits
    */
-  exports.prototype.remainingCredits = undefined;
+  exports.prototype.remaining_credits = undefined;
 
   /**
    * Total number of timestamps available per month.
-   * @member {Number} timestampsPerMonth
+   * @member {Number} timestamps_per_month
    */
-  exports.prototype.timestampsPerMonth = undefined;
+  exports.prototype.timestamps_per_month = undefined;
 
 
   return exports;

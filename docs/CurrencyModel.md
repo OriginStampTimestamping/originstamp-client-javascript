@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **String** | Name of the currency (uppercase) | [optional] 
-**currencyId** | **Number** | ID of the currency, e.g. 0: Bitcoin 1: Ethereum | [optional] 
+**currency_id** | **Number** | ID of the currency, e.g. 0: Bitcoin 1: Ethereum | [optional] 
 
 

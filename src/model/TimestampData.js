@@ -51,13 +51,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_id'))
-        obj.currencyId = ApiClient.convertToType(data['currency_id'], 'Number');
+        obj.currency_id = ApiClient.convertToType(data['currency_id'], 'Number');
       if (data.hasOwnProperty('private_key'))
-        obj.privateKey = ApiClient.convertToType(data['private_key'], 'String');
+        obj.private_key = ApiClient.convertToType(data['private_key'], 'String');
       if (data.hasOwnProperty('seed_id'))
-        obj.seedId = ApiClient.convertToType(data['seed_id'], 'String');
+        obj.seed_id = ApiClient.convertToType(data['seed_id'], 'String');
       if (data.hasOwnProperty('submit_status'))
-        obj.submitStatus = ApiClient.convertToType(data['submit_status'], 'Number');
+        obj.submit_status = ApiClient.convertToType(data['submit_status'], 'Number');
       if (data.hasOwnProperty('timestamp'))
         obj.timestamp = ApiClient.convertToType(data['timestamp'], 'Number');
       if (data.hasOwnProperty('transaction'))
@@ -68,27 +68,27 @@
 
   /**
    * 0: Bitcoin
-   * @member {Number} currencyId
+   * @member {Number} currency_id
    */
-  exports.prototype.currencyId = undefined;
+  exports.prototype.currency_id = undefined;
 
   /**
    * The private key represents the top hash in the Merkle Tree (see https://en.wikipedia.org/wiki/Merkle_tree ) or the hash of all hashes in the transaction.
-   * @member {String} privateKey
+   * @member {String} private_key
    */
-  exports.prototype.privateKey = undefined;
+  exports.prototype.private_key = undefined;
 
   /**
    * ID of associated seed which can be used to request separate seed information.
-   * @member {String} seedId
+   * @member {String} seed_id
    */
-  exports.prototype.seedId = undefined;
+  exports.prototype.seed_id = undefined;
 
   /**
    * The submit status of the hash:   0: the hash was not broadcasted yet  1: the hash was included into a transaction and broadcasted to the network, but not included into a block  2: the transaction was included into the latest block  3: the timestamp for your hash was successfully created.
-   * @member {Number} submitStatus
+   * @member {Number} submit_status
    */
-  exports.prototype.submitStatus = undefined;
+  exports.prototype.submit_status = undefined;
 
   /**
    * The date is returned in the following format: [ms] since 1.1.1970 (unix epoch), timezone: UTC. This is a true timestamp.

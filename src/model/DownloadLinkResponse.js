@@ -51,32 +51,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('download_url'))
-        obj.downloadUrl = ApiClient.convertToType(data['download_url'], 'String');
+        obj.download_url = ApiClient.convertToType(data['download_url'], 'String');
       if (data.hasOwnProperty('file_name'))
-        obj.fileName = ApiClient.convertToType(data['file_name'], 'String');
+        obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('file_size_bytes'))
-        obj.fileSizeBytes = ApiClient.convertToType(data['file_size_bytes'], 'Number');
+        obj.file_size_bytes = ApiClient.convertToType(data['file_size_bytes'], 'Number');
     }
     return obj;
   }
 
   /**
    * URL to download file.
-   * @member {String} downloadUrl
+   * @member {String} download_url
    */
-  exports.prototype.downloadUrl = undefined;
+  exports.prototype.download_url = undefined;
 
   /**
    * File name of downloaded file.
-   * @member {String} fileName
+   * @member {String} file_name
    */
-  exports.prototype.fileName = undefined;
+  exports.prototype.file_name = undefined;
 
   /**
    * File size in bytes.
-   * @member {Number} fileSizeBytes
+   * @member {Number} file_size_bytes
    */
-  exports.prototype.fileSizeBytes = undefined;
+  exports.prototype.file_size_bytes = undefined;
 
 
   return exports;

@@ -38,12 +38,12 @@
    * @class
    * @param currency {Number} 0: Bitcoin 1: Ethereum 2: AION 100: Südkurier
    * @param hashString {String} Hash in HEX representation for which the proof should be created. We allow the use of SHA-256. Note: We handle the hashes in lower-case.
-   * @param proofType {Number} Specifies which type of file should be returned. Possible value(s):  0: proof with a seed file (txt) or proof with a merkle tree (xml) 1: proof with a PDF file   Other formats will follow.
+   * @param proof_type {Number} Specifies which type of file should be returned. Possible value(s):  0: proof with a seed file (txt) or proof with a merkle tree (xml) 1: proof with a PDF file   Other formats will follow.
    */
   var exports = function(currency, hashString, proofType) {
     this.currency = currency;
-    this.hashString = hashString;
-    this.proofType = proofType;
+    this.hash_string = hashString;
+    this.proof_type = proofType;
   };
 
   /**
@@ -59,9 +59,9 @@
       if (data.hasOwnProperty('currency'))
         obj.currency = ApiClient.convertToType(data['currency'], 'Number');
       if (data.hasOwnProperty('hash_string'))
-        obj.hashString = ApiClient.convertToType(data['hash_string'], 'String');
+        obj.hash_string = ApiClient.convertToType(data['hash_string'], 'String');
       if (data.hasOwnProperty('proof_type'))
-        obj.proofType = ApiClient.convertToType(data['proof_type'], 'Number');
+        obj.proof_type = ApiClient.convertToType(data['proof_type'], 'Number');
     }
     return obj;
   }
@@ -74,15 +74,15 @@
 
   /**
    * Hash in HEX representation for which the proof should be created. We allow the use of SHA-256. Note: We handle the hashes in lower-case.
-   * @member {String} hashString
+   * @member {String} hash_string
    */
-  exports.prototype.hashString = undefined;
+  exports.prototype.hash_string = undefined;
 
   /**
    * Specifies which type of file should be returned. Possible value(s):  0: proof with a seed file (txt) or proof with a merkle tree (xml) 1: proof with a PDF file   Other formats will follow.
-   * @member {Number} proofType
+   * @member {Number} proof_type
    */
-  exports.prototype.proofType = undefined;
+  exports.prototype.proof_type = undefined;
 
 
   return exports;

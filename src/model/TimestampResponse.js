@@ -55,9 +55,9 @@
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Boolean');
       if (data.hasOwnProperty('date_created'))
-        obj.dateCreated = ApiClient.convertToType(data['date_created'], 'Number');
+        obj.date_created = ApiClient.convertToType(data['date_created'], 'Number');
       if (data.hasOwnProperty('hash_string'))
-        obj.hashString = ApiClient.convertToType(data['hash_string'], 'String');
+        obj.hash_string = ApiClient.convertToType(data['hash_string'], 'String');
       if (data.hasOwnProperty('timestamps'))
         obj.timestamps = ApiClient.convertToType(data['timestamps'], [TimestampData]);
     }
@@ -78,15 +78,15 @@
 
   /**
    * The time when your hash was submitted to OriginStamp. The date is returned in the following format: [ms] since 1.1.1970 (unix epoch), timezone: UTC. This is not considered as a true timestamp.
-   * @member {Number} dateCreated
+   * @member {Number} date_created
    */
-  exports.prototype.dateCreated = undefined;
+  exports.prototype.date_created = undefined;
 
   /**
    * The submitted hash in hex representation.
-   * @member {String} hashString
+   * @member {String} hash_string
    */
-  exports.prototype.hashString = undefined;
+  exports.prototype.hash_string = undefined;
 
   /**
    * Contains all the timestamp data of your hash until now.

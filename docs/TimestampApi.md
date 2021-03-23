@@ -25,8 +25,9 @@ var apiInstance = new OriginStamp.TimestampApi();
 
 var authorization = "authorization_example"; // String | A valid API key is essential for authorization to handle the request.
 
-var timestampRequest = new OriginStamp.TimestampRequest(); // TimestampRequest | DTO for the hash submission. Add all relevant information concerning your hash submission.
-
+var timestampRequest = new OriginStamp.TimestampRequest("<hash>"); // TimestampRequest | DTO for the hash submission. Add all relevant information concerning your hash submission.
+timestampRequest.comment = "<comment>";
+timestampRequest.notifications = null;
 
 var callback = function(error, data, response) {
   if (error) {
@@ -92,7 +93,7 @@ apiInstance.getHashStatus(authorization, hashString, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| A valid API key is essential for authorization to handle the request. | 
- **hashString** | **String**| The hash in string representation. | 
+ **hash_string** | **String**| The hash in string representation. | 
 
 ### Return type
 
@@ -141,7 +142,7 @@ apiInstance.getSeedStatus(authorization, seedId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| A valid API key is essential for authorization to handle the request. | 
- **seedId** | **String**| ID of the timestamp seed | 
+ **seed_id** | **String**| ID of the timestamp seed | 
 
 ### Return type
 

@@ -42,7 +42,7 @@
    */
   var exports = function(currency, notificationType, target) {
     this.currency = currency;
-    this.notificationType = notificationType;
+    this.notification_type = notificationType;
     this.target = target;
   };
 
@@ -59,7 +59,7 @@
       if (data.hasOwnProperty('currency'))
         obj.currency = ApiClient.convertToType(data['currency'], 'Number');
       if (data.hasOwnProperty('notification_type'))
-        obj.notificationType = ApiClient.convertToType(data['notification_type'], 'Number');
+        obj.notification_type = ApiClient.convertToType(data['notification_type'], 'Number');
       if (data.hasOwnProperty('target'))
         obj.target = ApiClient.convertToType(data['target'], 'String');
     }
@@ -74,9 +74,9 @@
 
   /**
    * 0: notify via email  1: notify a webhook
-   * @member {Number} notificationType
+   * @member {Number} notification_type
    */
-  exports.prototype.notificationType = undefined;
+  exports.prototype.notification_type = undefined;
 
   /**
    * Depending on the notification type, specify the target for the notification (e.g. mail address or webhook URL). The webhook URL will receive a POST request after timestamp was successfully created.

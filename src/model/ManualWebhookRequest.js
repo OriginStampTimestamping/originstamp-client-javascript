@@ -41,7 +41,7 @@
    */
   var exports = function(hash, webhookUrl) {
     this.hash = hash;
-    this.webhookUrl = webhookUrl;
+    this.webhook_url = webhookUrl;
   };
 
   /**
@@ -57,7 +57,7 @@
       if (data.hasOwnProperty('hash'))
         obj.hash = ApiClient.convertToType(data['hash'], 'String');
       if (data.hasOwnProperty('webhook_url'))
-        obj.webhookUrl = ApiClient.convertToType(data['webhook_url'], 'String');
+        obj.webhook_url = ApiClient.convertToType(data['webhook_url'], 'String');
     }
     return obj;
   }
@@ -70,9 +70,9 @@
 
   /**
    * The target URL to which we send the timestamp information of the requested hash via a post request.
-   * @member {String} webhookUrl
+   * @member {String} webhook_url
    */
-  exports.prototype.webhookUrl = undefined;
+  exports.prototype.webhook_url = undefined;
 
 
   return exports;

@@ -53,7 +53,7 @@
       if (data.hasOwnProperty('currency'))
         obj.currency = ApiClient.convertToType(data['currency'], 'String');
       if (data.hasOwnProperty('currency_id'))
-        obj.currencyId = ApiClient.convertToType(data['currency_id'], 'Number');
+        obj.currency_id = ApiClient.convertToType(data['currency_id'], 'Number');
     }
     return obj;
   }
@@ -66,9 +66,9 @@
 
   /**
    * ID of the currency, e.g. 0: Bitcoin 1: Ethereum
-   * @member {Number} currencyId
+   * @member {Number} currency_id
    */
-  exports.prototype.currencyId = undefined;
+  exports.prototype.currency_id = undefined;
 
 
   return exports;

@@ -98,7 +98,7 @@ apiInstance.getSeedStatus(authorization, seedId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**| A valid API key is essential for authorization to handle the request. | 
- **seedId** | **String**| ID of the timestamp seed | 
+ **seed_id** | **String**| ID of the timestamp seed | 
 
 ### Return type
 
