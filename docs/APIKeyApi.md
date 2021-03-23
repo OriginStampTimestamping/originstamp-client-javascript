@@ -1,25 +1,25 @@
-# OriginStamp.SchedulerApi
+# OriginStamp.APIKeyApi
 
 All URIs are relative to *https://api.originstamp.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getActiveCurrencies**](SchedulerApi.md#getActiveCurrencies) | **GET** /v3/currencies/get | Get active currencies
+[**getApiKeyUsage**](APIKeyApi.md#getApiKeyUsage) | **GET** /v3/api_key/usage | Usage
 
 
-<a name="getActiveCurrencies"></a>
-# **getActiveCurrencies**
-> DefaultOfListOfCurrencyModel getActiveCurrencies(authorization)
+<a name="getApiKeyUsage"></a>
+# **getApiKeyUsage**
+> DefaultUsageResponse getApiKeyUsage(authorization)
 
-Get active currencies
+Usage
 
-Returns an array with all active currencies.
+With this interface you can receive the current usage of your API key. The usage statistic refers to the associated account.
 
 ### Example
 ```javascript
 var OriginStamp = require('originstamp-client-javascript');
 
-var apiInstance = new OriginStamp.SchedulerApi();
+var apiInstance = new OriginStamp.APIKeyApi();
 
 var authorization = "authorization_example"; // String | A valid API key is essential for authorization to handle the request.
 
@@ -31,7 +31,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getActiveCurrencies(authorization, callback);
+apiInstance.getApiKeyUsage(authorization, callback);
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DefaultOfListOfCurrencyModel**](DefaultOfListOfCurrencyModel.md)
+[**DefaultUsageResponse**](DefaultUsageResponse.md)
 
 ### Authorization
 
@@ -51,5 +51,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: */*
 

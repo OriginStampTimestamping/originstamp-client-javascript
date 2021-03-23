@@ -20,38 +20,36 @@
     if (!root.OriginStamp) {
       root.OriginStamp = {};
     }
-    root.OriginStamp.DefaultOfstring = factory(root.OriginStamp.ApiClient);
+    root.OriginStamp.DefaultOfVoid = factory(root.OriginStamp.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The DefaultOfstring model module.
-   * @module model/DefaultOfstring
+   * The DefaultOfVoid model module.
+   * @module model/DefaultOfVoid
    * @version 3.0
    */
 
   /**
-   * Constructs a new <code>DefaultOfstring</code>.
+   * Constructs a new <code>DefaultOfVoid</code>.
    * The default service response object uses error code and message to indicate errors. These errors are handled by the client.
-   * @alias module:model/DefaultOfstring
+   * @alias module:model/DefaultOfVoid
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>DefaultOfstring</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DefaultOfVoid</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DefaultOfstring} obj Optional instance to populate.
-   * @return {module:model/DefaultOfstring} The populated <code>DefaultOfstring</code> instance.
+   * @param {module:model/DefaultOfVoid} obj Optional instance to populate.
+   * @return {module:model/DefaultOfVoid} The populated <code>DefaultOfVoid</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], 'String');
       if (data.hasOwnProperty('error_code'))
         obj.errorCode = ApiClient.convertToType(data['error_code'], 'Number');
       if (data.hasOwnProperty('error_message'))
@@ -59,12 +57,6 @@
     }
     return obj;
   }
-
-  /**
-   * Generic response object which contains the response data, e.g. timestamp information.
-   * @member {String} data
-   */
-  exports.prototype.data = undefined;
 
   /**
    * Contains the error of the request. If the error code is 0, everything is fine.
