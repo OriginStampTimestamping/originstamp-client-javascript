@@ -1,4 +1,4 @@
-# OriginStampApiDocumentation.ManualWebhookRequest
+# OriginStamp.ManualWebhookRequest
 
 ## Properties
 Name | Type | Description | Notes

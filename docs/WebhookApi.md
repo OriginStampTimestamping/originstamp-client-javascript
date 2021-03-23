@@ -1,6 +1,6 @@
-# OriginStampApiDocumentation.WebhookApi
+# OriginStamp.WebhookApi
 
-All URIs are relative to *https://api.originstamp.com/*
+All URIs are relative to *https://api.originstamp.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,20 +19,13 @@ RESTful interface to receive the status of a webhook. Based on the input paramet
 
 ### Example
 ```javascript
-var OriginStampApiDocumentation = require('origin_stamp_api_documentation');
-var defaultClient = OriginStampApiDocumentation.ApiClient.default;
+var OriginStamp = require('originstamp-client-javascript');
 
-// Configure API key authorization: API Key Authorization
-var API Key Authorization = defaultClient.authentications['API Key Authorization'];
-API Key Authorization.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key Authorization.apiKeyPrefix = 'Token';
-
-var apiInstance = new OriginStampApiDocumentation.WebhookApi();
+var apiInstance = new OriginStamp.WebhookApi();
 
 var authorization = "authorization_example"; // String | A valid API key is essential for authorization to handle the request.
 
-var webhookRequest = new OriginStampApiDocumentation.WebhookRequest(); // WebhookRequest | DTO for registering webhook information.
+var webhookRequest = new OriginStamp.WebhookRequest(); // WebhookRequest | DTO for registering webhook information.
 
 
 var callback = function(error, data, response) {
@@ -67,7 +60,7 @@ Name | Type | Description  | Notes
 
 <a name="registerWebhookNotification"></a>
 # **registerWebhookNotification**
-> ModelDefault registerWebhookNotification(authorization, webhookRequest)
+> DefaultOfVoid registerWebhookNotification(authorization, webhookRequest)
 
 Webhook
 
@@ -75,20 +68,13 @@ Method which allows a subscription for a webhook notification. If this method is
 
 ### Example
 ```javascript
-var OriginStampApiDocumentation = require('origin_stamp_api_documentation');
-var defaultClient = OriginStampApiDocumentation.ApiClient.default;
+var OriginStamp = require('originstamp-client-javascript');
 
-// Configure API key authorization: API Key Authorization
-var API Key Authorization = defaultClient.authentications['API Key Authorization'];
-API Key Authorization.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key Authorization.apiKeyPrefix = 'Token';
-
-var apiInstance = new OriginStampApiDocumentation.WebhookApi();
+var apiInstance = new OriginStamp.WebhookApi();
 
 var authorization = "authorization_example"; // String | A valid API key is essential for authorization to handle the request.
 
-var webhookRequest = new OriginStampApiDocumentation.WebhookRequest(); // WebhookRequest | DTO for querying webhook information.
+var webhookRequest = new OriginStamp.WebhookRequest(); // WebhookRequest | DTO for querying webhook information.
 
 
 var callback = function(error, data, response) {
@@ -110,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelDefault**](ModelDefault.md)
+[**DefaultOfVoid**](DefaultOfVoid.md)
 
 ### Authorization
 
@@ -131,20 +117,13 @@ With this interface you can trigger manual webhook to see how a webhook looks li
 
 ### Example
 ```javascript
-var OriginStampApiDocumentation = require('origin_stamp_api_documentation');
-var defaultClient = OriginStampApiDocumentation.ApiClient.default;
+var OriginStamp = require('originstamp-client-javascript');
 
-// Configure API key authorization: API Key Authorization
-var API Key Authorization = defaultClient.authentications['API Key Authorization'];
-API Key Authorization.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//API Key Authorization.apiKeyPrefix = 'Token';
-
-var apiInstance = new OriginStampApiDocumentation.WebhookApi();
+var apiInstance = new OriginStamp.WebhookApi();
 
 var authorization = "authorization_example"; // String | A valid API key is essential for authorization to handle the request.
 
-var manualWebhookRequest = new OriginStampApiDocumentation.ManualWebhookRequest(); // ManualWebhookRequest | DTO for webhook request.
+var manualWebhookRequest = new OriginStamp.ManualWebhookRequest(); // ManualWebhookRequest | DTO for webhook request.
 
 
 var callback = function(error, data, response) {
