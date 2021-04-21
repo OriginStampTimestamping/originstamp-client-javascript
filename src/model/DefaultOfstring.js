@@ -53,9 +53,9 @@
       if (data.hasOwnProperty('data'))
         obj.data = ApiClient.convertToType(data['data'], 'String');
       if (data.hasOwnProperty('error_code'))
-        obj.errorCode = ApiClient.convertToType(data['error_code'], 'Number');
+        obj.error_code = ApiClient.convertToType(data['error_code'], 'Number');
       if (data.hasOwnProperty('error_message'))
-        obj.errorMessage = ApiClient.convertToType(data['error_message'], 'String');
+        obj.error_message = ApiClient.convertToType(data['error_message'], 'String');
     }
     return obj;
   }
@@ -68,15 +68,15 @@
 
   /**
    * Contains the error of the request. If the error code is 0, everything is fine.
-   * @member {Number} errorCode
+   * @member {Number} error_code
    */
-  exports.prototype.errorCode = undefined;
+  exports.prototype.error_code = undefined;
 
   /**
    * Contains the error message, that possibly occurred. If it is empty, everything is fine.
-   * @member {String} errorMessage
+   * @member {String} error_message
    */
-  exports.prototype.errorMessage = undefined;
+  exports.prototype.error_message = undefined;
 
 
   return exports;
